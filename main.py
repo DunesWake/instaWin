@@ -13,13 +13,12 @@ options.add_argument('--no-sandbox')
 try:
     browser = webdriver.Chrome(chromedriver, options=options)
 except Exception as e:
-    print(f'No found chromedriver in this environment.')
-    print(f'Install on your machine. exception: {e}')
+    prin1t(f'no chromedriver found')
     sys.exit()
 
 #
 browser.set_window_size(1280, 1024)
-time.sleep(4)
+time.sleep(1)
 browser.get('https://www.instagram.com/username/')
 time.sleep(4)
 html = browser.page_source
