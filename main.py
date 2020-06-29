@@ -26,9 +26,8 @@ html = browser.page_source
 soup = BeautifulSoup(html, features="html.parser")
 posts = soup.select_one("meta[property='og:description']").get("content").split()[4]
 start = int(posts)
-print(f'posts at start up: {posts}')
-print('now waiting...')
-print(soup.find_all("div", class_="v1Nh3 kIKUG _bz0w")[0].find_all("a")[0].get("href"))
+
+print(f'posts at start up: {posts}')print('now waiting...')
 
 # waits for a new post
 while (int(posts)) == start:
